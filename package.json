@@ -1,0 +1,24 @@
+{
+  "name": "aurelia-bootstrap-switch",
+  "version": "0.0.1",
+  "description": "Aurelia custom component for the bootstrap-switch library",
+  "main": "bootstrap-switch.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/drdwilcox/aurelia-bootstrap-switch.git"
+  },
+  "keywords": [
+    "aurelia",
+    "bootstrap",
+    "component"
+  ],
+  "author": "Don Wilcox",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/drdwilcox/aurelia-bootstrap-switch/issues"
+  },
+  "homepage": "https://github.com/drdwilcox/aurelia-bootstrap-switch#readme"
+}
