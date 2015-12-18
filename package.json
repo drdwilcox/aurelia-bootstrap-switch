@@ -24,6 +24,6 @@
   "homepage": "https://github.com/drdwilcox/aurelia-bootstrap-switch#readme",
   "dependencies": {
       "aurelia-framework": "^1.0.0-beta.1.0.5",
-      "bootstrap-switch": "^3.3.2"
+      "npm:bootstrap-switch": "^3.3.2"
   }
 }
