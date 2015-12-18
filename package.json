@@ -22,8 +22,10 @@
     "url": "https://github.com/drdwilcox/aurelia-bootstrap-switch/issues"
   },
   "homepage": "https://github.com/drdwilcox/aurelia-bootstrap-switch#readme",
-  "dependencies": {
-      "aurelia-framework": "^1.0.0-beta.1.0.5",
-      "npm:bootstrap-switch": "^3.3.2"
+  "jspm": {
+    "dependencies": {
+      "aurelia-framework": "npm:aurelia-framework@^1.0.0-beta.1",
+      "bootstrap-switch": "npm:bootstrap-switch@^3.3.2"
+    }
   }
 }
