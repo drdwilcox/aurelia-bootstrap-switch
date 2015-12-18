@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/drdwilcox/aurelia-bootstrap-switch.git"
+    "url": "https://github.com/drdwilcox/aurelia-bootstrap-switch"
   },
   "keywords": [
     "aurelia",
@@ -16,9 +16,13 @@
     "component"
   ],
   "author": "Don Wilcox",
-  "license": "ISC",
+  "license": "CC0-1.0",
   "bugs": {
     "url": "https://github.com/drdwilcox/aurelia-bootstrap-switch/issues"
   },
-  "homepage": "https://github.com/drdwilcox/aurelia-bootstrap-switch#readme"
+  "homepage": "https://github.com/drdwilcox/aurelia-bootstrap-switch#readme",
+  "dependencies": {
+      "aurelia-framework": "^1.0.0-beta.1.0.5",
+      "bootstrap-switch": "^3.3.2"
+  }
 }

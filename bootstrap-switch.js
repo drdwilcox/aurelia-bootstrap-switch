@@ -1,17 +1,17 @@
 ﻿import {inject, bindingMode, bindable, BindingEngine} from 'aurelia-framework';
 import 'bootstrap-switch';
 
-@inject(Element, BindingEngine)
 @bindable ({
     name: 'checked', 
     defaultBindingMode: bindingMode.twoWay
 })
+@bindable ({
+    name: 'init', 
+    defaultBindingMode: bindingMode.oneTime
+})
+@inject(Element, BindingEngine)
 export class BootstrapSwitchCustomElement {
-    @bindable size
     @bindable disabled
-    @bindable labelText
-    @bindable onText
-    @bindable offText
     constructor(element, bindingEngine) {
         this.element = element;
         this.bindingEngine = bindingEngine;
@@ -20,25 +20,19 @@ export class BootstrapSwitchCustomElement {
     bind() {
         this.input = $(this.element).find('input');
 
-        let init = {
-            state: this.checked,
-            disabled: this.disabled
-        };
-        if (this.size) {
-            init.size = this.size;
+        let init = {};
+        if (this.init) {
+            Object.assign(init, this.init);
         }
-        if (this.labelText) {
-            init.labelText = this.labelText;
+        
+        if (init.state === undefined) {
+            init.state = this.checked;
         }
-        if (this.onText) {
-            init.onText = this.onText;
-        }
-        if (this.offText) {
-            init.offText = this.offText;
+        if (init.disabled === undefined) {
+            init.disabled = this.disabled;
         }
 
         this.input
-            //.bootstrapSwitch('state', this.checked)
             .bootstrapSwitch(init)
             .on('switchChange.bootstrapSwitch', (event, state) => { this.checked = state; });        
         
@@ -55,5 +49,6 @@ export class BootstrapSwitchCustomElement {
     unbind() {
         this.input.bootstrapSwitch('destroy');
         this.disabledSubscription.dispose();
+        this.checkedSubscription.dispose();
     }
 }
