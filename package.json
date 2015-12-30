@@ -24,9 +24,8 @@
   "homepage": "https://github.com/drdwilcox/aurelia-bootstrap-switch#readme",
   "jspm": {
     "main": "index",
-    "format": "systemjs",
     "directories": {
-      "lib": "index"
+      "lib": "dist"
     },
     "dependencies": {
       "aurelia-framework": "npm:aurelia-framework@^1.0.0-beta.1",
