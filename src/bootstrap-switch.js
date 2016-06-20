@@ -1,5 +1,7 @@
 ﻿import {inject, bindingMode, bindable, BindingEngine} from 'aurelia-framework';
 import 'bootstrap-switch';
+import 'bootstrap';
+import 'jquery';
 
 @bindable ({
     name: 'checked', 
